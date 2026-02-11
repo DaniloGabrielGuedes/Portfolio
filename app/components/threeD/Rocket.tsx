@@ -8,7 +8,7 @@ import { ThrusterFire } from "./ThrusterFire"
 
 export function Rocket() {
     const ref = useRef<THREE.Group>(null)
-    const { scene } = useGLTF("/models/rocket.glb")
+    const { scene } = useGLTF("/models/Rocket.glb")
 
     const offset = 2.7;
     const baseY = -45;
@@ -39,4 +39,4 @@ export function Rocket() {
     )
 }
 
-useGLTF.preload("/models/rocket.glb")
+useGLTF.preload("/models/Rocket.glb")
