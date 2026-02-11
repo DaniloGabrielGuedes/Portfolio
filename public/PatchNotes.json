@@ -1,16 +1,31 @@
 {
     "patches": [
         {
+            "version": "v0.1.2",
+            "date": "11/02/2026",
+            "desc": [
+                "Adicionado tela de loading.",
+                "Adicionado opção de download do currículo.",
+                "Atualizado versão do Next.js.",
+                "Atualizado formato de patch notes.",
+                "Correção de bugs relacionados à renderização do Three.js.",
+                "Correções de rotação e posicionamento dos objetos 3D."
+            ]
+        },
+        {
             "version": "v0.1.1",
             "date": "10/02/2026",
-            "desc": "Ajuste no parallax e implementação da Top Bar.",
-            "published": "2026-02-10T12:00:00Z"
+            "desc": [
+                "Publicação inicial do Portfolio com Vercel.",
+                "Ajuste no parallax e implementação da Top Bar."
+            ]
         },
         {
             "version": "v0.1.0",
-            "date": "05/02/2026",
-            "desc": "Release inicial do core do RocketCanvas.",
-            "published": null
+            "date": null,
+            "desc": [
+                "Release inicial do core do RocketCanvas."
+            ]
         }
     ]
 }
