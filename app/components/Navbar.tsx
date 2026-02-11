@@ -11,14 +11,33 @@ export default function Navbar() {
             <footer className="fixed top-0 left-0 w-full z-50 px-6 py-3 border-b border-white/10 bg-black/40 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto flex justify-between items-center text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-mono">
                     <div>
-                        <span>Versão: <span className="text-cyan-400">v0.1.1 (BETA)</span></span>
+                        <span>Versão: <span className="text-cyan-400">
+                            {patchNotes.patches.length > 0 ? patchNotes.patches[0].version : 'N/A'} (BETA)
+                        </span></span>
                     </div>
 
-                    <div className="hidden md:block">
-                        <span>Status: <span className="text-yellow-500">WIP</span></span>
-                    </div>
+                    <div className="flex items-center gap-3">
+                        <a
+                            href="/Danilo Gabriel Guedes - Desenvolvedor.pdf"
+                            download="Danilo Gabriel Guedes - Desenvolvedor.pdf"
+                            className="hover:text-white transition-colors flex items-center gap-2 border border-white/20 px-2 py-1 rounded bg-white/5 hover:bg-white/10 pointer-events-auto"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                className="w-3 h-3 text-cyan-400"
+                                strokeWidth="2.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            >
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            <span>Currículo</span>
+                        </a>
 
-                    <div>
                         <button
                             onClick={() => setIsOpen(true)}
                             className="hover:text-white transition-colors flex items-center gap-2 border border-white/20 px-2 py-1 rounded bg-white/5 hover:bg-white/10 pointer-events-auto">
@@ -42,12 +61,18 @@ export default function Navbar() {
                             </button>
                         </div>
 
-                        <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
-                            {patchNotes.patches.map((note: { version: string; date: string; desc: string }) => (
+                        <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+                            {patchNotes.patches.map((note: { version: string; date: string | null; desc: string[] }) => (
                                 <div key={note.version} className="border-l-2 border-cyan-900 pl-4">
-                                    <p className="text-white text-xs">{note.version} — {note.date}</p>
+                                    <p className="text-white text-xs">
+                                        {note.version}
+                                        <span className="text-gray-500 text-[10px] ml-2">{note.date ? `- publicado em ${note.date}` : ''}</span>
+
+                                    </p>
                                     <p className="text-gray-400 text-[11px] leading-relaxed mt-1">
-                                        {note.desc}
+                                        {note.desc.map((line, i) => (
+                                            <span key={i}>• {line}<br /></span>
+                                        ))}
                                     </p>
                                 </div>
                             ))}

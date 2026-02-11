@@ -17,7 +17,7 @@ export function Rocket() {
         const scrollY = window.scrollY
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight
         const scrollProgress = scrollY / maxScroll
-        const moveCycles = 4
+        const moveCycles = 1.8
 
         if (ref.current) {
             ref.current.rotation.x = Math.sin((scrollProgress * moveCycles) * Math.PI) * 0.02

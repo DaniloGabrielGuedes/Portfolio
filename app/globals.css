@@ -5,3 +5,21 @@
 body {
 	background-color: #000;
 }
+
+.backgroundBlur {
+	background-color: rgba(255, 255, 255, 0.028);
+}
+
+@keyframes orbit {
+	from {
+		transform: translate(-50%, -50%) rotate(0deg) translateY(-64px);
+	}
+
+	to {
+		transform: translate(-50%, -50%) rotate(360deg) translateY(-64px);
+	}
+}
+
+.animate-orbit {
+	animation: orbit 2s linear infinite;
+}
