@@ -1,0 +1,16 @@
+{
+    "patches": [
+        {
+            "version": "v0.1.1",
+            "date": "10/02/2026",
+            "desc": "Ajuste no parallax e implementação da Top Bar.",
+            "published": "2026-02-10T12:00:00Z"
+        },
+        {
+            "version": "v0.1.0",
+            "date": "05/02/2026",
+            "desc": "Release inicial do core do RocketCanvas.",
+            "published": null
+        }
+    ]
+}
