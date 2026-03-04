@@ -5,6 +5,25 @@ import { Suspense } from "react"
 import { Rocket } from "./Rocket"
 import { Environment } from "@react-three/drei"
 import { World } from "../background/World"
+import { useThree } from "@react-three/fiber"
+
+function Scene() {
+    const { viewport } = useThree()
+
+    const isMobile = viewport.width < 240
+
+    return (
+        <>
+            <World />
+
+            <group position={isMobile ? [39, -100, -120] : [viewport.width / 3.5, 10, 0]}>
+                <Rocket />
+            </group>
+
+            <Environment preset="city" />
+        </>
+    )
+}
 
 export function RocketCanvas() {
     return (
@@ -13,11 +32,7 @@ export function RocketCanvas() {
             style={{ pointerEvents: 'none' }}
         >
             <Suspense fallback={null}>
-                <World />
-                <group position={[150, 10, 0]}>
-                    <Rocket />
-                </group>
-                <Environment preset="city" />
+                <Scene />
             </Suspense>
         </Canvas>
     )

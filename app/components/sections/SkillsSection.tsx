@@ -2,19 +2,39 @@ const SkillsSection = () => {
 	const skills = [
 		{
 			category: 'Backend',
-			items: ['C#', '.NET Core/Framework', 'Entity Framework', 'Node.js', 'ASP.NET Core'],
+			items: ['C#', 'VB.NET', '.NET Core/Framework', 'Entity Framework', 'Node.js', 'ASP.NET'],
 			icon: (
-				<svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#9DA2AF" strokeWidth="2">
-					<path d="M8 3v3a2 2 0 01-2 2H3m18 0h-3a2 2 0 01-2-2V3M3 16v3a2 2 0 002 2h3m8-2h3a2 2 0 002-2v-3" />
+				<svg
+					className="w-4 h-4 text-gray-400"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+				>
+					<path d="M8 3H5a2 2 0 0 0-2 2v3" />
+					<path d="M16 3h3a2 2 0 0 1 2 2v3" />
+					<path d="M8 21H5a2 2 0 0 1-2-2v-3" />
+					<path d="M16 21h3a2 2 0 0 0 2-2v-3" />
 				</svg>
 			),
 		},
 		{
 			category: 'Front-end',
-			items: ['React', 'Next.js', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Bootstrap'],
+			items: ['React', 'Next', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Bootstrap'],
 			icon: (
-				<svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#9DA2AF" strokeWidth="2">
-					<path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+				<svg
+					className="w-4 h-4 text-gray-400"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+				>
+					<polyline points="9 18 3 12 9 6" />
+					<polyline points="15 6 21 12 15 18" />
 				</svg>
 			),
 		},
@@ -23,7 +43,7 @@ const SkillsSection = () => {
 			items: ['SQL Server', 'PostgreSQL', 'SAP Hana', 'Firebase', 'MongoDB'],
 			icon: (
 				<svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="#9DA2AF" strokeWidth="2">
-					<path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+					<path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
 				</svg>
 			),
 		},

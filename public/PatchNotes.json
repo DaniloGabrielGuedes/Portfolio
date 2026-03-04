@@ -1,6 +1,19 @@
 {
     "patches": [
         {
+            "version": "v0.1.3",
+            "date": "04/03/2026",
+            "desc": [
+                "Ajuste do atomo de hidrogênio na tela de loading.",
+                "Ajuste no posicionamento responsivo do foguete.",
+                "Adicionado seção de 'Project Summary'.",
+                "Adicionado seção de 'About Me'.",
+                "Adicionado opção de contato via Whatsapp.",
+                "Atualizado imagem de perfil.",
+                "Atualizado ícones de skills."
+            ]
+        },
+        {
             "version": "v0.1.2",
             "date": "11/02/2026",
             "desc": [
